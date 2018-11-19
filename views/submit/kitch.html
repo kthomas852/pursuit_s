@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--This is the Contact page-->
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="submit.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Next Stage of Happiness</title>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img src="../images/yelp_bw.png" class="logo">
+                <p class="mega">The Pursuit</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <div>
+                    <div class="row">
+                    <a class="nav-item nav-link" href="/">Back to The Pursuit <span class="sr-only">(current)</span></a>
+                    </div>
+                    <div class="row">
+                    <form class="navbar-form" role="search">
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                              <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                              </div>
+                            </div>
+                          </form>
+                          </div>
+                          </div>
+        </nav>
+    </div>
+</head>
+<body>
+    <div class="containerfluid">
+        <div class="spacer"></div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-7 main mGray">
+                <div class="about">
+                    <h1 class="c">The Kitch Submission Form:</h1>
+                </div>
+                    <div class="row">
+                    <div class="col-md-6">
+                    Segment Title:
+                    <br>
+                    <input type="text" id="title" placeholder=" Title Here">  
+                    <!--<span style="float: right"><br>
+                        <span><input type="checkbox" name="vehicle" value="Bike"> Allow for Video</span><br>
+                        <span><input type="checkbox" name="vehicle" value="Bike"> Allow GIF Animation</span><br>
+                        <span><input type="checkbox" name="vehicle" value="Bike"> Include me in Feed Back</span><br>
+                        <span><input type="checkbox" name="vehicle" value="Bike"> Post Photo Right Side</span><br>
+                    </span>-->
+                    <article id='category' data-category='kitch'></article>
+                    <br>
+                    Ingredients:
+                    <br>
+                    <textarea type="text" id="summary" class="form-control" rows="3" placeholder=" Bread, Jelly, Peanut Butter"></textarea>
+                    <br>
+                    </div>
+                    <div class="col-md-6">
+                        <div class=""></div>
+                    <strong style="text-decoration: underline">Choose picture to upload here!</strong><br>
+                    File name:<input type="file" name="imgfile">
+                    <br>
+                    <br>
+                    <input type="submit" name="submit" value="upload">
+                    <br>
+                    <br>
+                    <a href="../../assets/images/kitch.png" target="_blank">Stuck???<br>See Example Kitch Story here!</a>
+                    </div>
+                    </div>
+                    <br>
+                    <br> Introdution & Instructions:
+                    <br>
+                    <textarea id="message" class="form-control" rows="5" placeholder="Lets make a PB&J!"></textarea>
+                    <br>
+                    <button id="send-up" class="btn btn-dangern yelp">Submit</button>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight mGray"><p class="c p">Spotlight Elements</p></div>
+                    <div class="cal mGray"><p class="c p">[Events Calendar]</p></div>
+                </div>
+            </div>
+            <div class="row" style="height: 100px;"></div>
+            <!--<div class="row foot"><f>© Copy Right 2018 Kyle Thomas</f></div>-->
+        </div>
+        <script src="../submit.js"></script>
+    </body>
+    </html>

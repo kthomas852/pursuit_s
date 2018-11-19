@@ -1,0 +1,21 @@
+.logo {
+    height: 60px; 
+    width: 105px
+}
+
+.correct {
+    margin-left: -105px
+}
+
+.hidden {
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    opacity: 0;
+}
+
+@media only screen and (max-width: 680px){
+    .correct {
+        margin-left: -38px;
+    }
+}

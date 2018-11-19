@@ -1,0 +1,240 @@
+.navbar {
+    padding: 0px;
+    border-bottom: 3px solid lightgrey;
+}
+
+.navbar-brand {
+    padding: 0px;
+    padding-left: 9%;
+}
+
+.header {
+    background-color: #4aaaa5;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+/*styling for new pages*/
+.pillars{
+    width: 100%;
+}
+
+.educate{
+    color: black;
+    height: 150px;
+    width: 300px;
+}
+
+.motivate{
+    color: black;
+    height: 150px;
+    width: 300px;
+}
+
+.celebrate{
+    color: black;
+    height: 150px;
+    width: 300px;
+}
+
+.spacer{
+    height:50px;
+}
+
+.feed{
+    background-color: lightgray;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.cal{
+    background-color: blue;
+    color: whitesmoke;
+    text-align: center;
+    padding:10px;
+    margin-top:20%;
+    margin-left:30%;
+    width: 80%;
+    height: 400px;
+}
+
+.innerDates{
+    padding: 10px;
+}
+
+.logo {
+    height: 60px; 
+    width: 105px
+}
+
+.correct {
+    margin-left: -105px
+}
+/*styling for new pages ends*/
+
+body {
+    background-image: url("images/paper.jpg");
+}
+
+.c {
+    font-size: 18px;
+    color: #4aaaa5;
+    font-weight: bold;
+    text-align: left;
+    padding: 0px;
+}
+
+f {
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.thumb {
+    width: 150px;
+    height: 190px;
+    margin-left: 0px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    float: left;
+}
+
+.main {
+    margin: 30px;
+    padding: 15px;
+    border: thin solid lightgrey;
+    background-color: whitesmoke;
+}
+
+.about {
+    padding: 10px;
+    border-bottom: thin solid lightgrey;
+}
+
+.foot {
+    height: 10%;
+    color: whitesmoke;
+    background-color: #777777;
+    width: 100%;
+    border-top: 3px solid #4aaaa5;
+    position: fixed;
+    bottom: 0px;
+    z-index: 4;
+}
+
+#message {
+    height: 80px;
+}
+
+.port {
+    margin-top: 20px;
+    background-color: grey;
+}
+
+.portimg {
+    height: 85%;
+    width: 85%;
+    top: -15px;
+    left: 5px;
+    position: relative;
+}
+
+.banner {
+    width: 115%;
+    height: 20%;
+    background-color: red;
+    color: whitesmoke;
+    z-index: 3;
+    top: 65%;
+    right: 15px;
+    position: relative;
+    text-justify: center;
+}
+
+.form-control {
+    /* give input boxes right angles */
+    border-radius: 0;
+  
+    /* keep from horizontally resizing text area */
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+.create {
+    background-color: lightcoral;
+    color: whitesmoke;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: lightgrey;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.yelp {
+    background-color: #c41200;
+    color: whitesmoke;
+}
+
+.dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+li {
+    padding-top: 10px;
+}
+
+li:hover {
+    cursor: pointer;
+    color: teal;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: teal;
+}
+
+.pursuitTag {
+    text-decoration: underline;
+    text-decoration-color: #c41200;
+    size: 30px;
+    color: black;
+}
+
+.naw0 {
+    color: black;
+}
+
+.naw1 {
+    color: black;
+}
+
+.naw2 {
+    color: black;
+}
+
+.naw3 {
+    color: black;
+}
+
+.naw4 {
+    color: black;
+}

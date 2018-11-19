@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+	<title>Pursuit - Login </title>
+	
+	<link rel="stylesheet" href="/css/reset.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="/submit/submit.css" type="text/css">
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+</head>
+
+<body>
+
+  <div class="wrap">
+		<div class="avatar aWhite">
+      <img src="images/yelp.png">
+		</div>
+		<input id="txtEmail" type="email" placeholder="username" required>
+		<div class="bar">
+			<i></i>
+		</div>
+		<input id="txtPassword" type="password" placeholder="password" required>
+		<a href="" class="forgot_link">forgot ?</a>
+		<button id="btnLogin" class="btn btn-action">Sign in</button>
+		<!--<button id="btnSignUp" class="btn btn-action hide">SignUp</button>-->
+		<a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+	</div>
+
+  <!--<script src="/js/firebase.js"></script>-->
+
+</body>
+
+</html>
