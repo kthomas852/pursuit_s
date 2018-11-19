@@ -8,7 +8,7 @@ module.exports = {
 	'googleAuth' : {
 		'clientID': '61950672392-bn1p622notf5mru483dopn7q0v8javke.apps.googleusercontent.com',
 		'clientSecret': 'HgrPPHjDLYnptT2u2NYv9Zn6',
-		'callbackURL': 'http://localhost:8080/home'
+		'callbackURL': 'https://pursuit-s.herokuapp.com/home'
 	},
 
 	'firebase' : {
