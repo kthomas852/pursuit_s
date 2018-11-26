@@ -1,9 +1,9 @@
 /* colors*/
 body{
-    background-color: #DCDCDC;
+    background-color: white;
 }
 .aWhite{
-    background-color: #DCDCDC;
+    color: white;
 }
 
 .lGray{
@@ -11,11 +11,11 @@ body{
 }
 
 .mGray{
-    background-color: #A9A9A9;
+    color: #A9A9A9;
 }
 
 .dGray{
-    background-color: #696969;
+    color: #696969;
 }
 
 /* Styles */
@@ -61,17 +61,17 @@ body{
 }*/
 
 .highlight{
-    border-radius: 10px;
+    border: 3px solid lightgrey;
     text-align: center;
     padding: 10px;
     margin-left: 5%;
-    margin-bottom: 20px;
+    margin-top: 20px;
     width: 60%;
     height: 200px;
 }
 
 .cal{
-    border-radius: 10px;
+    border: 3px solid lightgrey;
     text-align: center;
     padding:10px;
     margin-top:0%;
@@ -88,16 +88,15 @@ body{
 }
 
 .logo {
-    height: 80px; 
-    width: 80px
+    height: 84px; 
+    width: 140px
 }
 
 .posting{
     margin: 30px;
     padding: 15px;
-    border: thin solid lightgrey;
-    background-color: whitesmoke;
-    border-radius: 10px;
+    border-bottom: thin solid lightgrey;
+    background-color: white;
 }
 
 .shift{
@@ -130,10 +129,59 @@ body{
 
 .navbar {
     padding: 0px;
-    border-bottom: 3px solid lightgrey;
+    background-color: #D32323;
 }
 
 .navbar-brand {
     padding: 0px;
     padding-left: 9%;
+}
+
+.options{
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 40px;
+    width: 100%;
+    width: 100vw;
+}
+
+.pillarOp{
+    float: left;
+    width: 10%;
+    background-color: wihte;
+    border: thin solid lightgray;
+}
+
+.Op2{
+    float: right;
+    
+}
+
+.custom-centered{
+    margin:0 auto;
+    width: 65%;
+   }
+
+.search-text{
+    font-size: 20px;
+    color: rgb(31, 29, 29);
+    background-color: white;
+    padding-left: 12px;
+    padding-right: 10px; 
+    padding-top: 3px;
+}
+    
+.front{    
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.glyph{
+    height: 20px;
+    width: 20px;
+}
+
+.red{
+    border: thin solid white;
+    background-color: #dc3545;
 }
