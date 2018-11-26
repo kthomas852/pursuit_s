@@ -5,14 +5,14 @@ var port = process.env.PORT || 8080;
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var morgan = require('morgan');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var flash = require('connect-flash');
 
 
 var configDB = require('./config/database.js');
-mongoose.connect(configDB.url);
+//mongoose.connect(configDB.url);
 require('./config/passport')(passport);
 
 app.use(morgan('dev'));
