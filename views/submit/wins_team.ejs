@@ -13,33 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Next Stage of Happiness</title>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="../images/yelp_bw.png" class="logo">
-            <p class="mega">The Pursuit</p>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <div>
-                        <div class="row">
-                            <a class="nav-item nav-link" href="/home">Back to The Pursuit <span class="sr-only">(current)</span></a>
-                        </div>
-                        <div class="row">
-                            <form class="navbar-form" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-        </nav>
-    </div>
+    <%-include('../navbarP')%>
 </head>
 <body>
     <div class="containerfluid">
@@ -48,7 +22,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-7 main mGray">
                 <div class="about">
-                    <h1 class="c">Please use the form below for your submission to The Pursuit</h1>
+                    <h1 class="c">Submit your Win to The Pursuit</h1>
                 </div>
                     <div class="row">
                     <div class="col-md-6">
@@ -61,7 +35,13 @@
                         <span><input type="checkbox" name="vehicle" value="Bike"> Include me in Feed Back</span><br>
                         <span><input type="checkbox" name="vehicle" value="Bike"> Post Photo Right Side</span><br>
                     </span>-->
-                    <article id='category' data-category='general'></article>
+                    <article id='category' data-category='win-team'></article>
+                    <br>
+                    Team Leaders Email:
+                    <br>
+                    <input type="email" id="email" placeholder=" you@yelp.com">
+                    <br>
+                    <br>
                     </div>
                     <div class="col-md-6">
                         <div class=""></div>
@@ -70,12 +50,15 @@
                     <br>
                     <br>
                     <input type="submit" name="submit" value="upload">
+                    <br>
+                    <br>
+                    <a href="../images/win_team.png" target="_blank">Stuck???<br>See Example Team Win Story here!</a>
                     </div>
                     </div>
                     <br>
                     <br> Insert Story Here:
                     <br>
-                    <textarea id="message" class="form-control" rows="5" placeholder="Give us the details..."></textarea>
+                    <textarea id="message" class="form-control" rows="5" placeholder="What encouraged success in this scenario?"></textarea>
                     <br>
                     <button id="send-up" class="btn btn-dangern yelp">Submit</button>
                     <br>

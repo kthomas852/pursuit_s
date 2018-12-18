@@ -2,8 +2,7 @@
 <!--This is the Contact page-->
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="submit.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -13,33 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Next Stage of Happiness</title>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <img src="../images/yelp_bw.png" class="logo">
-            <p class="mega">The Pursuit</p>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <div>
-                        <div class="row">
-                            <a class="nav-item nav-link" href="/home">Back to The Pursuit <span class="sr-only">(current)</span></a>
-                        </div>
-                        <div class="row">
-                            <form class="navbar-form" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-        </nav>
-    </div>
+    <%-include('../navbarP')%>
 </head>
 <body>
     <div class="containerfluid">
@@ -48,7 +21,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-7 main mGray">
                 <div class="about">
-                    <h1 class="c">Seize the Mic Submission Form:</h1>
+                    <h1 class="c">MVP Submission Form:</h1>
                 </div>
                     <div class="row">
                     <div class="col-md-6">
@@ -61,9 +34,21 @@
                         <span><input type="checkbox" name="vehicle" value="Bike"> Include me in Feed Back</span><br>
                         <span><input type="checkbox" name="vehicle" value="Bike"> Post Photo Right Side</span><br>
                     </span>-->
-                    <article id='category' data-category='seize-the-mic'></article>
+                    <article id='category' data-category='mvp'></article>
+                    <br>
+                    MVPs Email:
+                    <br>
+                    <input type="email" id="email" placeholder=" mvp@yelp.com">
                     <br>
                     <br>
+                    Fun Fact:
+                    <br>
+                    <input type="text" id="FunFact" placeholder=" Likes Cats">  
+                    <br>
+                    <br>
+                    Relevant Stat:
+                    <br>
+                    <input type="text" id="rStat" placeholder=" Average 80 daily dials">  
                     </div>
                     <div class="col-md-6">
                         <div class=""></div>
@@ -74,15 +59,14 @@
                     <input type="submit" name="submit" value="upload">
                     <br>
                     <br>
-                    <a href="../images/seize_mic.png" target="_blank">Stuck???<br>See Example Seize the Mic Story here!</a>
+                    <a href="../images/MVP.png" target="_blank">Stuck???<br>See Example MVP Story here!</a>
                     </div>
                     </div>
                     <br>
                     <br> Insert Story Here:
                     <br>
-                    <textarea id="message" class="form-control" rows="5" placeholder="Tell us in detail what you would like to bring attention to...
-What makes this issue important?
-(Think PIPE)"></textarea>
+                    <textarea id="message" class="form-control" rows="5" placeholder="Why is this person an MVP?  
+What Advice can be taken away from their success?"></textarea>
                     <br>
                     <button id="send-up" class="btn btn-dangern yelp">Submit</button>
                     <br>
