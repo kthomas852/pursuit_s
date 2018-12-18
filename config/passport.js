@@ -3,9 +3,11 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 //var User            = require('../app/models/user');
 var configAuth = require('./auth');
+let temp= '';
 
 module.exports = function(passport) {
-
+	
+	let holdUser = [];
 
 	passport.serializeUser(function(user, done){
 		done(null, user.id);
@@ -71,11 +73,15 @@ module.exports = function(passport) {
 	passport.use(new GoogleStrategy({
 	    clientID: configAuth.googleAuth.clientID,
 	    clientSecret: configAuth.googleAuth.clientSecret,
-	    callbackURL: configAuth.googleAuth.callbackURL
+		callbackURL: configAuth.googleAuth.callbackURL,
 	  },
 	  function(accessToken, refreshToken, profile, done) {
-	    	process.nextTick(function(){
+	    	//process.nextTick(function(){
+				if(profile._json.hd !== "yelp.com"){
+					done(new Error("Invalid Host Domain"));
+				}else{
 	    		User.findOne({'google.id': profile.id}, function(err, user){
+					temp = profile.id;
 	    			if(err)
 	    				return done(err);
 	    			if(user)
@@ -92,10 +98,12 @@ module.exports = function(passport) {
 	    						throw err;
 	    					return done(null, newUser);
 	    				})
-	    				console.log(profile);
-	    			}
-	    		});
-	    	});
+						console.log(profile);
+						console.log(temp);
+					}
+				});
+				}
+	    	//});
 	    }
 
 	));

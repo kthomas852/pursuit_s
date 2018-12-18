@@ -42,7 +42,7 @@ var config = {
       sdb.ref('/submissions').push({
           reviewed: false,
           title: title,
-          PursuitersEmail: firebaseUser.email,
+          //PursuitersEmail: firebaseUser.email,
           email: email,
           myRole: myRole,
           biz: biz,
