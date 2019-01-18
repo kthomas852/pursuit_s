@@ -91,8 +91,9 @@ module.exports = function(app, passport){
 	app.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
 
 	app.get('/auth/google/callback', 
-	  passport.authenticate('google', { successRedirect: '/home',
-	                                      failureRedirect: '/' }));
+	  passport.authenticate('google'), (req,res) => {
+		  res.send()
+	  });
 
 
 	app.get('/logout', function(req, res){
@@ -102,9 +103,20 @@ module.exports = function(app, passport){
 };
 
 function isLoggedIn(req, res, next) {
-	if(req.isAuthenticated()){
+	if(req.session.views){
+		req.session.views++;
+		res.setHeader('Content-Type', 'text/html');
+		res.write('<p>views: ' + req.session.views + '<p>');
+		res.write('<p>expires in: ' + (req.session.cookie.maxAge/1000) + 's<p>');
 		next();
-	}else{
+	}else {
+		req.session.views = 1;
 		res.redirect('/auth/google');
+		//res.end('welcome to the session demo. refresh!');
 	}
+	// if(req.isAuthenticated()){
+	// 	next();
+	// }else{
+	// 	res.redirect('/auth/google');
+	// }
 }

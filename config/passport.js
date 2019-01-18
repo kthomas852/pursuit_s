@@ -3,7 +3,6 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 //var User            = require('../app/models/user');
 var configAuth = require('./auth');
-let temp= '';
 
 module.exports = function(passport) {
 	
@@ -73,35 +72,39 @@ module.exports = function(passport) {
 	passport.use(new GoogleStrategy({
 	    clientID: configAuth.googleAuth.clientID,
 	    clientSecret: configAuth.googleAuth.clientSecret,
-		callbackURL: configAuth.googleAuth.callbackURL,
+		callbackURL: /*"/auth/google/callback",*/ configAuth.googleAuth.callbackURL,
 	  },
 	  function(accessToken, refreshToken, profile, done) {
+		  let check = profile.emails[0].value.slice(profile.emails[0].value.indexOf("@") + 1);
 	    	//process.nextTick(function(){
-				if(profile._json.hd !== "yelp.com"){
-					done(new Error("Invalid Host Domain"));
+				console.log(check)
+				if(check !== "yelp.com"){
+					console.log("Invalid Host Domain, please use a Yelp.com email ONLY!")
+					done(new Error("Invalid Host Domain: " + check));
 				}else{
-	    		User.findOne({'google.id': profile.id}, function(err, user){
-					temp = profile.id;
-	    			if(err)
-	    				return done(err);
-	    			if(user)
-	    				return done(null, user);
-	    			else {
-	    				var newUser = new User();
-	    				newUser.google.id = profile.id;
-	    				newUser.google.token = accessToken;
-	    				newUser.google.name = profile.displayName;
-	    				newUser.google.email = profile.emails[0].value;
+	    		// User.findOne({'google.id': profile.id}, function(err, user){
+				// 	temp = profile.id;
+	    		// 	if(err)
+	    		// 		return done(err);
+	    		// 	if(user)
+	    		// 		return done(null, user);
+	    		// 	else {
+	    		// 		var newUser = new User();
+	    		// 		newUser.google.id = profile.id;
+	    		// 		newUser.google.token = accessToken;
+	    		// 		newUser.google.name = profile.displayName;
+	    		// 		newUser.google.email = profile.emails[0].value;
 
-	    				newUser.save(function(err){
-	    					if(err)
-	    						throw err;
-	    					return done(null, newUser);
-	    				})
-						console.log(profile);
-						console.log(temp);
-					}
-				});
+	    		// 		newUser.save(function(err){
+	    		// 			if(err)
+	    		// 				throw err;
+	    		// 			return done(null, newUser);
+	    		// 		})
+				// 		console.log(profile);
+				// 		console.log(temp);
+				// 	}
+				// });
+				done();
 				}
 	    	//});
 	    }

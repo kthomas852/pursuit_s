@@ -5,15 +5,15 @@
 //auth.createUserWithEmailAndPassword(email, password);
 //checks to see if the oauth state has changed after login
 //auth.onAuthStateChanged(firebaseUser => { });
-
-var config = {
-    apiKey: "AIzaSyCnmHqTk9X8HD_T852mvO29QN370QKmeA0",
-    authDomain: "pursuit-19db7.firebaseapp.com",
-    databaseURL: "https://pursuit-19db7.firebaseio.com",
-    projectId: "pursuit-19db7",
-    storageBucket: "pursuit-19db7.appspot.com",
-    messagingSenderId: "61950672392"
-  };
+var config = require('../../config/auth');
+// var config = {
+//     apiKey: "AIzaSyCnmHqTk9X8HD_T852mvO29QN370QKmeA0",
+//     authDomain: "pursuit-19db7.firebaseapp.com",
+//     databaseURL: "https://pursuit-19db7.firebaseio.com",
+//     projectId: "pursuit-19db7",
+//     storageBucket: "pursuit-19db7.appspot.com",
+//     messagingSenderId: "61950672392"
+//   };
   firebase.initializeApp(config);
   const auth = firebase.auth();
   const txtEmail = document.getElementById('txtEmail');

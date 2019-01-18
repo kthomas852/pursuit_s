@@ -1,5 +1,5 @@
 /*This is the JavaScript fo the Pursuit Article Feed page */
-
+var postFormat = require('./postingTypes')
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCnmHqTk9X8HD_T852mvO29QN370QKmeA0",
@@ -35,10 +35,23 @@
   });*/
 
   db.ref('/submissions').on('child_added', function(snapshot, prevChildKey){
+    console.log(snapshot.val().category);
     console.log('Added this Child right here--->')
     let div = $('<div>').attr('class', 'posting');
-    div.append($('<h5>').text(snapshot.val().title));
-    div.append($('<p>').text(snapshot.val().message));
+    // div.append($('<h5>').text(snapshot.val().title));
+    // div.append($('<p>').text(snapshot.val().message));
+    switch(snapshot.val().category){
+      case 'general':
+        div.append(postFormat.general);
+        break;
+      case 'fashion':
+        div.append(postFormat.fashion);
+        break;
+      default:
+        div.append($('<h5>').text(snapshot.val().title));
+        div.append($('<p>').text(snapshot.val().message));
+        break;
+    }
     $('.feed').prepend(div);
   });
 
