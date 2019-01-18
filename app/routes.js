@@ -1,8 +1,11 @@
 var User = require('./models/user');
 module.exports = function(app, passport){
-	app.get('/', isLoggedIn, function(req, res){
-		res.redirect('/home');
-	});
+	// app.get('/', isLoggedIn, function(req, res){
+	// 	res.redirect('/home');
+	// });
+	app.get('/', function(req, res){
+		res.render('home.ejs');
+	})
 
 	app.get('/home', function(req, res){
 		res.render('home.ejs');

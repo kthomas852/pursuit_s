@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8770;
 
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
@@ -23,9 +23,9 @@ app.use(session({secret: 'anystringoftext',
 				 saveUninitialized: true,
 				 resave: true}));
 
-// app.use(passport.initialize());
-// app.use(passport.session()); // persistent login sessions
-// app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 
