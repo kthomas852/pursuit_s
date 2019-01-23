@@ -6,7 +6,7 @@ module.exports = {
 
     },
     fashion: 
-        `<h5>${snapshot.val().message}</h5>
+        `<h5>fashcase${snapshot.val().message}</h5>
         <p>${snapshot.val().title}</p>
         <br>
         <button btn btn-primary likeBtn>Like</button>`
